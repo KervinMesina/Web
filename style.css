@@ -1,0 +1,356 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #C19A6B;
+  color: #fff;
+  padding: 1rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #00bfa6;
+  transform: scale(1.1);
+}
+
+.hero {
+  background-image: url(Cover.jpg);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  background-color: #00695c;
+  border: 2px solid #00bfa6;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.hero::after {
+  content: "";
+  background-image: url('https://img.freepik.com/premium-photo/beautiful-8k-smooth-gradient-abstract-background_759200-3011.jpg?semt=ais_hybrid&w=740');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.hero button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: #fff;
+  color: #00695c;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #e0f2f1;
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.card {
+  background-color: #C19A6B;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: #00695c;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.contact input,
+.contact textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #00bfa6;
+  outline: none;
+}
+
+.contact button {
+  background-color: #00695c;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+footer:hover {
+  background-color: #333;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+.social-button:hover {
+  transform: scale(1.05);
+}
+
+.facebook-btn {
+  background-color: #3b5998;
+}
+
+.facebook-btn:hover {
+  background-color: #2d4373;
+}
+
+.email-btn {
+  background-color: #0072c6;
+}
+
+.email-btn:hover {
+  background-color: #005a8d;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+}
+
+#business-details,
+#rule {
+  background-color: rgba(193, 154, 107, 0.7);  /* updated to semi-transparent */
+  border: 2px solid #000000;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 30px auto;
+  max-width: 90%;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+#business-details .about-image,
+#rule .about-image {
+  text-align: center;
+}
+
+#business-details .about-image img,
+#rule .about-image img {
+  max-width: 80%;
+  height: auto;
+  border: 3px solid #020202;
+  border-radius: 100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#rule .about-image img {
+  max-width: 50%;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  color: #fff;
+}
+
+/* Responsive for screen widths 768px and below */
+@media screen and (max-width: 768px) {
+  #nav-menu {
+    display: none;
+    width: 100%;
+    background-color: rgba(193, 154, 107, 0.85);  /* updated to semi-transparent */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.25);
+    animation: slideDown 0.4s ease forwards;
+    transform-origin: top;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+    to {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+
+  #nav-menu.active {
+    display: block;
+  }
+
+  #nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  #nav-menu ul li {
+    margin: 0;
+  }
+
+  #nav-menu ul li a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  #nav-menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00bfa6;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
